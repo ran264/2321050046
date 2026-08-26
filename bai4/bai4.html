@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+<body>
+    
+    <h1>Form tạo thông tin</h1>
+    <form>
+        <div>
+        <!-- input nếu không truyền type thì type mặc định là text  -->
+         </div>
+        <div>Enter your name: <input type="text" name="name"></div>
+        <div>Introduce yourself <textarea name="introduce"></textarea></div>
+        <div><p><b>Emai: </b></p><input type="text" name="email"></div>
+        </div>
+        <div>
+            <p><b>Number phone </b></p>
+            <input name="numberPhone"
+            type="tel"
+            placeholder = "dạng số 123"
+            required
+            pattern="([0-9]{1}(-[0-9]{3})(-[0-9]{3})(-[0-9]{4}))">
+        </div>
+        <div><p><b>Gender: </b></p>
+            <input type="radio" name="gender" value="male">Nam<br>
+            <input type="radio" name="gender" value="female">Nữ<br>
+
+        </div>
+        <div><p><b>Hobby: </b></p>
+            Game: <input type="checkbox" name="hobby" value="game">game<br>
+            Music: <input type="checkbox" name="hobby" value="music">music<br>
+            Football: <input type="checkbox" name="hobby" value="football">football<br>
+
+        </div>
+        <div>
+            <p><b>Trình duyệt web hay sử dụng </b></p>
+            <input list="browsers">
+                <datalist id ="browser">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                </datalist>
+            <select name="browser">
+                <option value="Internet Explorer">Internet Explorer</option>
+                <option value="Firefox">Firefox </option>
+                <option value="Chrome">Chrome</option>
+            </select>
+        </div>
+        <div>
+            0<input type="range" id ="a" value ="50">100
+        </div>
+
+        <div>
+            <input type="submit">
+            <button>click</button>
+            <input type="reset">
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SHP2bQGPYr4?si=t7gApcLCKa12nDoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </form>
+    <MARQUEE>
+        <img width="560" height="315"      src="/2321050046/anh/133849212413476578.jpg">
+    </MARQUEE>
+    <audio controls>
+        <source src="" type ="">
+
+    </audio>
+    <video controls>
+        <source src=" " type =" ">
+    </video>
+    
+</body>
+</html>
