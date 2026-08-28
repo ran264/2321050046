@@ -1,0 +1,10 @@
+h3{
+    color:green;
+}
+.title{
+    background-color: black;
+}
+
+h3.title{
+    background-color: orange;
+}
