@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đào tạo HUMG</title>
+    <style>
+        body{
+            margin:0;
+        }
+        .danh-sach-muc{
+            padding: 0;
+            margin:0;
+            /* bỏ dấu chấm ở danh sách khi dùng ul , li */
+            list-style: none;
+            display: flex;
+            /* gap khoảng cách các đối tượng ở trong */
+            gap: 20px;
+        }
+        .danh-muc{
+            background-color: #198cf0;
+        }
+        .lien-ket{
+            color:white;
+            /* bỏ gạch chân */
+            text-decoration: none;
+        }
+        main{
+            display: flex;
+        }
+        .trai{
+            width: 20%;
+            height: 100vh;
+            /* tạo đường viền dùng border */
+            /* 3 tham số : độ dày , loại đường viền , màu sắc */
+            border-right:1px solid blue;
+        }
+       
+        
+        .khoi-dang-nhap{
+           
+            width:100%;
+            height:300px;
+        }
+        form{
+            
+            width: 80%;
+            margin: 10px auto;
+        }
+        .khoi{
+            width:100%;
+            margin-bottom: 10px;
+            
+        }
+        p{
+            margin:0;
+        }
+        input{
+            width: 100%;
+            padding: 5px 0 ;
+        } 
+        .khoi-quen-mk{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .quen-mk-lk{
+            color:blue;
+            text-decoration: none;
+        }
+        button{
+            width:100%;
+            padding: 5px 0;
+            border-radius: 5px;
+        }
+        .login{
+            margin-bottom: 10px;
+        }
+        .phai{
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="danh-muc" >
+        <ul class="danh-sach-muc">
+            <li class="muc"><a href="#" class="lien-ket">Thực tập , đồ án</a></li>
+            <li class="muc"><a href="#" class="lien-ket">Thủ tục Một cửa</a></li>
+            <li class="muc"><a href="#" class="lien-ket">Một cửa online</a></li>
+            <li class="muc"><a href="#" class="lien-ket">Email HUMG</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="trai">
+            <div class="khoi-dang-nhap">
+                <form action="">
+                    <div class="khoi">
+                        <p>Tài khoản</p>
+                        <input type="text" name="id">
+                    </div>
+                    <div class="khoi">
+                        <p>Mật khẩu</p>
+                        <input type="password" name="id">
+                    </div>
+                    <div class="khoi-quen-mk">
+                        <a class="quen-mk-lk" href="#">Quên mật khẩu</a>
+                    </div>
+                    <div class="khoi">
+                       <button class="login">Đăng nhập</button>
+                       <button class="login365">Đăng nhập với Microsoft Office</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="phai">
+            <div class="danh-sach-tin"></div>
+        </div>
+    </main>
+</body>
+</html>
