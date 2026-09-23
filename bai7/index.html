@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- internal javaScript -->
+    <script>
+        //in ra màn hình
+        document.writeln("Hello world <br>");
+        //khai báo biến
+        var name = "Quang Anh";
+        document.writeln(name);
+        name = "Ly";
+        document.writeln(name);
+        var year = 2026;
+        document.writeln(year);
+        var so1 = 10;
+        var so2 = 5;
+        var ketQua = 0;
+        //phép cộng
+        ketQua = so1 + so2;
+        document.writeln(ketQua + "<br>");
+        //phép trừ
+        ketQua = so1 - so2;
+        document.writeln(ketQua);
+        //phép nhân
+        ketQua = so1 * so2;
+        document.writeln(ketQua);
+        //phép chia
+        ketQua = so1 / so2;
+        document.writeln(ketQua);
+        //phép chia lấy dư
+        ketQua = so1 % so2;
+        document.writeln(ketQua);
+        // ++
+        document.writeln("<Br>");
+        document.writeln(++so1)
+
+        so1 += so2;
+        document.writeln(so1);
+
+        var ho = "Hoang";
+        var ten = "Huan";
+        document.writeln(" <br>" + ho + " " + ten);
+        document.writeln(" <br>");
+        document.writeln(ho.length);
+
+        // ktr du lieu cua bien
+        document.writeln(typeof (ho));
+        document.writeln(" <br>");
+
+        // 
+        var hoVaTen = "Hoang Ngoc Huan";
+        document.writeln(hoVaTen.indexOf("c"));
+        document.writeln(" <br>");
+        document.writeln(hoVaTen.includes("H"));
+        document.writeln(hoVaTen.startsWith("Hoang"));
+        document.writeln(" <br>");
+        // thay the ki tu
+        document.writeln(hoVaTen.replace("Hoang", "Ngoc"));
+        document.writeln(" <br>");
+        document.writeln(hoVaTen.toLocaleUpperCase());
+
+        document.writeln(" <br>");
+        document.writeln(hoVaTen.toLocaleLowerCase());
+
+
+
+    </script>
+    <!-- external javaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
