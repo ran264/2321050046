@@ -13,6 +13,7 @@
     <script>
         //in ra màn hình
         document.writeln("Hello world <br>");
+
         //khai báo biến
         var name = "Quang Anh";
         document.writeln(name);
@@ -23,12 +24,15 @@
         var so1 = 10;
         var so2 = 5;
         var ketQua = 0;
+
         //phép cộng
         ketQua = so1 + so2;
         document.writeln(ketQua + "<br>");
+
         //phép trừ
         ketQua = so1 - so2;
         document.writeln(ketQua);
+
         //phép nhân
         ketQua = so1 * so2;
         document.writeln(ketQua);
@@ -39,8 +43,8 @@
         ketQua = so1 % so2;
         document.writeln(ketQua);
         // ++
-        document.writeln("<Br>");
-        document.writeln(++so1)
+        document.writeln("<br>");
+        document.writeln(++so1);
 
         so1 += so2;
         document.writeln(so1);
@@ -71,7 +75,76 @@
         document.writeln(hoVaTen.toLocaleLowerCase());
 
 
+        //date
+        var homNay = new Date();
+        document.writeln("<br>");
+        document.writeln(homNay);
+        var ngay = new Date("8/6/2025");
+        document.writeln(ngay);
 
+        document.writeln("<br>");
+        var namNay = homNay.getFullYear();
+        document.write(namNay);
+
+        document.writeln("<br>");
+        var thangNay = homNay.getMonth();
+        document.write(thangNay);
+
+        document.writeln("<br>");
+        var ngayHomNay = homNay.getDate();
+        document.write(ngayHomNay);
+
+        // Mảng 
+        var mang = [1, 2, 3, 4, 5];
+        document.writeln("<br>");
+        document.writeln(mang[2]);
+        document.writeln("<br>");
+        document.writeln(mang.length);
+
+        document.writeln("<br>");
+        var mangHonHop = [" Na", "Ka", "Saku", "Sasu", 1, 2, 3, 4, 5, 6];
+        var mangTen = [" Na", "Ka", "Saku", "Sasu"];
+        var mangSo = [1, 2, 3, 4, 5];
+        document.writeln(mang[2]);
+        document.writeln("<br>");
+        var d = mang.concat(mangSo, mangTen);
+        document.writeln("<br>");
+
+        document.write(d.pop());
+        document.writeln("<br>");
+        d.push("Jiray");
+        document.write(d);
+        document.writeln("<br>");
+        // đảo ngược 
+        document.writeln(mangSo.reverse());
+
+        // Object 
+        var thongTinSinhVien = {
+            ten: "Hoang Ngoc Huan", namSinh: 2005,
+            queQuan: {
+                thanhPho: "Hà Nội", xa: "Thiên Lộc"
+            }
+        };
+        document.writeln("<br>");
+        document.write(thongTinSinhVien.queQuan.thanhPho);
+
+        tuoi = namNay - thongTinSinhVien.namSinh;
+        thongTinSinhVien.tuoi = tuoi;
+        document.writeln("<br>");
+
+        // boolean : true nam - false nu 
+        thongTinSinhVien.gioiTinh = true;
+
+        // === so sánh cả giá trị và kiểu dữ liệu
+        
+        var so =5;
+        if (so %2==0){
+            document.writeln("So chan");
+
+        }
+        else {
+            document.writeln("le");
+        }
     </script>
     <!-- external javaScript -->
     <script src="script.js"></script>
