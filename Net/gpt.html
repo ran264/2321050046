@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone - Beginner</title>
+    <link rel="stylesheet" href="gptpp.css">
+</head>
+<body>
+
+    <!-- Khung chính chứa Sidebar và Nội dung -->
+    <div class="app-container">
+        
+        <!-- Thanh Sidebar bên trái -->
+        <aside class="sidebar">
+            <div class="logo">🟢 Spotify</div>
+            <ul class="nav-menu">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Tìm kiếm</a></li>
+            </ul>
+            
+            <div class="library-box">
+                <h3>Thư viện</h3>
+                <p>Tạo danh sách phát đầu tiên của bạn</p>
+                <button class="btn-create">Tạo danh sách phát</button>
+            </div>
+        </aside>
+
+        <!-- Phần nội dung chính bên phải -->
+        <main class="main-content">
+            <!-- Thanh điều hướng phía trên -->
+            <header class="top-bar">
+                <input type="text" placeholder="Bạn muốn phát nội dung gì?" class="search-input">
+                <div class="auth-buttons">
+                    <button class="btn-signup">Đăng ký</button>
+                    <button class="btn-login">Đăng nhập</button>
+                </div>
+            </header>
+
+            <!-- Khu vực hiển thị danh sách bài hát thịnh hành -->
+            <section class="section">
+                <h2>Những bài hát thịnh hành</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-img">🎵</div>
+                        <h4>Chờ chút...</h4>
+                        <p>CONGB</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">🎵</div>
+                        <h4>Cảm ơn tình yêu tôi</h4>
+                        <p>Anh Trai Vượt Ngàn Chông Gai</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">🎵</div>
+                        <h4>để dành cho em</h4>
+                        <p>Dangrangto, DONAL</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Thanh Banner cố định ở đáy trang -->
+    <footer class="bottom-banner">
+        <div class="banner-text">
+            <strong>Xem trước Spotify</strong>
+            <p>Đăng ký để nghe không giới hạn các bài hát và podcast với quảng cáo không thường xuyên.</p>
+        </div>
+        <button class="btn-banner">Đăng ký miễn phí</button>
+    </footer>
+
+</body>
+</html>

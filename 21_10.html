@@ -1,0 +1,134 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh diem</title>
+</head>
+
+<body>
+    <div>Nhập điểm A: <input type="number" id="diemA" /></div>
+    <div>Nhập điểm B: <input type="number" id="diemB" /></div>
+    <div>Nhập điểm C: <input type="number" id="diemC" /></div>
+    <div>
+        <button onclick="tinhDiemChu()">Tính điểm</button>
+    </div>
+    <script>
+        function tinhDiem() {
+            var A = document.getElementById("diemA").value;
+            var B = document.getElementById("diemB").value;
+            var C = document.getElementById("diemC").value;
+
+            document.getElementById("ketQua").value = tinhDiemChu(a,b,c);
+        }
+        function tinhDiemChu(a,b,c) {
+            if (diem >= 8.5) {
+                return "A";
+            } else if (diem >= 7) {
+                return "B";
+            } else if (diem >= 5.5) {
+                return "C";
+            } else if (diem >= 4) {
+                return "D";
+            } else if (diem >= 0 && diem < 4) {
+                return "F";
+            } else {
+                return "Điểm không hợp lệ";
+            }
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm chữ</title>
+</head>
+
+<body>
+    <h2>Tính điểm chữ</h2>
+
+    <label>Điểm A:</label>
+    <input type="number" id="diemA" min="0" max="10" step="0.1">
+    <br><br>
+
+    <label>Điểm B:</label>
+    <input type="number" id="diemB" min="0" max="10" step="0.1">
+    <br><br>
+
+    <label>Điểm C:</label>
+    <input type="number" id="diemC" min="0" max="10" step="0.1">
+    <br><br>
+
+    <button onclick="tinhDiem()">Tính điểm</button>
+
+    <p>Điểm trung bình: <span id="diemTB"></span></p>
+    <p>Điểm chữ: <input type="text" id="ketQua" readonly></p>
+    <div>Tuổi: <input type="number" id="namSinh" /></div>
+    <button onclick="hienThiTuoi()">Tính Tuổi</button>
+    <p id="ketquaTuoi"></p>
+    <script>
+        function tinhDiem() {
+            var a = document.getElementById("diemA").value;
+            var b = document.getElementById("diemB").value;
+            var c = document.getElementById("diemC").value;
+
+            if (a === "" || b === "" || c === "") {
+                alert("Vui lòng nhập đầy đủ điểm!");
+                return;
+            }
+
+            a = Number(a);
+            b = Number(b);
+            c = Number(c);
+
+            if (a < 0 || a > 10 ||
+                b < 0 || b > 10 ||
+                c < 0 || c > 10) {
+                alert("Điểm phải nằm trong khoảng từ 0 đến 10!");
+                return;
+            }
+
+            var diem = (a + b + c) / 3;
+
+            document.getElementById("diemTB").innerHTML =
+                diem.toFixed(2);
+
+            document.getElementById("ketQua").value =
+                tinhDiemChu(diem);
+        }
+
+        function tinhDiemChu(diem) {
+            if (diem >= 8.5) {
+                return "A";
+            } else if (diem >= 7) {
+                return "B";
+            } else if (diem >= 5.5) {
+                return "C";
+            } else if (diem >= 4) {
+                return "D";
+            } else {
+                return "F";
+            }
+        }
+
+        function tinhTuoi() {
+            var namSinh = parseInt(document.getElementById("namSinh").value);
+            var namHienTai = new Date().getFullYear();
+            return namHienTai - namSinh;
+        }
+        function hienThiTuoi() {
+            document.getElementById("ketquaTuoi").innerHTML =
+                "Tuổi của bạn là: " + tinhTuoi();
+        }
+    </script>
+</body>
+
+</html>

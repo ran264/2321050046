@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="k.css">
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <nav class="navbar">
+            <!-- Bên trái: logo + trang chủ + ô tìm kiếm -->
+            <div class="navbar-left">
+                <a href="#" class="logo">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="#1ED760">
+                        <circle cx="12" cy="12" r="12"/>
+                        <path d="M17 16.3c-.2.3-.6.4-.9.2-2.5-1.5-5.7-1.9-9.4-1-.4.1-.7-.1-.8-.5-.1-.4.1-.7.5-.8 4.1-.9 7.6-.5 10.4 1.2.3.2.4.6.2.9zm1.2-2.7c-.3.4-.8.5-1.1.3-2.9-1.8-7.3-2.3-10.7-1.2-.4.1-.9-.1-1-.5-.1-.4.1-.9.5-1 3.9-1.2 8.7-.6 12 1.4.4.2.5.7.3 1zm.1-2.8C15 8.9 9.3 8.7 6 9.7c-.5.2-1.1-.1-1.2-.6-.2-.5.1-1.1.6-1.2 3.8-1.2 10.1-.9 14 1.4.5.3.6.9.3 1.4-.3.4-.9.6-1.4.3z"/>
+                    </svg>
+                </a>
+                <a href="#" class="icon-btn" title="Trang chủ">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3z"/>
+                    </svg>
+                </a>
+                <div class="search-box">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path d="M10 2a8 8 0 105.3 14l5 5 1.4-1.4-5-5A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+                    </svg>
+                    <input type="text" placeholder="Bạn muốn phát nội dung gì?">
+                </div>
+            </div>
+
+            <!-- Bên phải: các link chức năng + nút đăng nhập -->
+            <ul class="navbar-right">
+                <li><a href="#">Premium</a></li>
+                <li><a href="#">Hỗ trợ</a></li>
+                <li><a href="#">Tải xuống</a></li>
+                <li class="divider">|</li>
+                <li><a href="#" class="install-app">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                        <path d="M12 3v10.6l3.6-3.6L17 11.4 12 16.4 7 11.4l1.4-1.4 3.6 3.6V3h1zM5 19h14v2H5z"/>
+                    </svg>
+                    Cài đặt Ứng dụng
+                </a></li>
+                <li><a href="#">Đăng ký</a></li>
+                <li><a href="#" class="btn-login">Đăng nhập</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== MAIN ========== -->
+    <div class="main">
+
+        <!-- ---------- SIDEBAR (bên trái) ---------- -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <span class="sidebar-title">Thư viện</span>
+                <button class="btn-create">
+                    <span class="plus">+</span> Tạo
+                </button>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>Tạo danh sách phát đầu tiên của bạn</h3>
+                <p>Rất dễ! Chúng tôi sẽ giúp bạn</p>
+                <button class="btn-white">Tạo danh sách phát</button>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>Hãy cùng tìm và theo dõi một số podcast</h3>
+                <p>Chúng tôi sẽ cập nhật cho bạn thông tin về các tập mới</p>
+                <button class="btn-white">Duyệt xem podcast</button>
+            </div>
+
+            <footer class="sidebar-footer">
+                <div class="footer-links">
+                    <a href="#">Pháp lý</a>
+                    <a href="#">Trung tâm an toàn và quyền riêng tư</a>
+                    <a href="#">Chính sách quyền riêng tư</a>
+                    <a href="#">Cookie</a>
+                    <a href="#">Giới thiệu Quảng cáo</a>
+                    <a href="#">Hỗ trợ tiếp cận</a>
+                    <a href="#">Cookie</a>
+                </div>
+                <button class="btn-lang">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                        <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 2c1 0 2.2 1.7 2.8 4.5H9.2C9.8 5.7 11 4 12 4zM4.3 11a7.9 7.9 0 010-2h3.9c-.1.7-.1 1.3-.1 2s0 1.3.1 2H4.3a7.9 7.9 0 010-2zm.7 4h3.5c.3 1.4.7 2.6 1.3 3.5A8 8 0 015 15zm3.5-8H5a8 8 0 015.8-3.5C10.2 4.4 9.8 5.6 9.5 7zM12 20c-1 0-2.2-1.7-2.8-4.5h5.6c-.6 2.8-1.8 4.5-2.8 4.5zm3.2-6.5H8.8c-.1-.6-.1-1.3-.1-2s0-1.3.1-2h6.4c.1.7.1 1.3.1 2s0 1.4-.1 2zm.3 5c.6-.9 1-2.1 1.3-3.5h3.5a8 8 0 01-4.8 3.5zm1.6-5.5c.1-.7.1-1.3.1-2s0-1.3-.1-2h3.9a7.9 7.9 0 010 4h-3.9zM19.2 9h-3.5c-.3-1.4-.7-2.6-1.3-3.5A8 8 0 0119.2 9z"/>
+                    </svg>
+                    Tiếng Việt
+                </button>
+            </footer>
+        </aside>
+
+        <!-- ---------- NỘI DUNG CHÍNH (bên phải) ---------- -->
+        <section class="content">
+
+            <h2 class="section-title">Những bài hát thịnh hành</h2>
+            <div class="card-grid">
+                <div class="song-card">
+                    <div class="song-thumb thumb-1"></div>
+                    <p class="song-name">chờ chút... (feat. CONGB)</p>
+                    <p class="song-sub">TINH HÀ "SAY HI", CONGB</p>
+                </div>
+                <div class="song-card">
+                    <div class="song-thumb thumb-2"></div>
+                    <p class="song-name">CẢM ƠN TÌNH YÊU TÔI</p>
+                    <p class="song-sub">Anh Trai Vượt Ngàn Chông Gai, Hoàng Dũng, Osad, ...</p>
+                </div>
+                <div class="song-card">
+                    <div class="song-thumb thumb-3"></div>
+                    <p class="song-name">để dành cho em</p>
+                    <p class="song-sub">Dangrangto, DONAL</p>
+                </div>
+                <div class="song-card">
+                    <div class="song-thumb thumb-4"></div>
+                    <p class="song-name">Hẹn em dưới pháo hoa</p>
+                    <p class="song-sub">Ân ngờ, kphuong</p>
+                </div>
+                <div class="song-card">
+                    <div class="song-thumb thumb-5"></div>
+                    <p class="song-name">new trick</p>
+                    <p class="song-sub">ROSÉ</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">Nghệ sĩ phổ biến</h2>
+            <div class="card-grid">
+                <div class="artist-card">
+                    <div class="artist-thumb thumb-1"></div>
+                    <p class="song-name">Sơn Tùng M-TP</p>
+                    <p class="song-sub">Nghệ sĩ</p>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-thumb thumb-2"></div>
+                    <p class="song-name">SOOBIN</p>
+                    <p class="song-sub">Nghệ sĩ</p>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-thumb thumb-3"></div>
+                    <p class="song-name">HIEUTHUHAI</p>
+                    <p class="song-sub">Nghệ sĩ</p>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-thumb thumb-4"></div>
+                    <p class="song-name">Da LAB</p>
+                    <p class="song-sub">Nghệ sĩ</p>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-thumb thumb-5"></div>
+                    <p class="song-name">buitruonglinh</p>
+                    <p class="song-sub">Nghệ sĩ</p>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- ========== BANNER ĐĂNG KÝ DƯỚI CÙNG ========== -->
+    <div class="signup-banner">
+        <div>
+            <p class="banner-title">Xem trước Spotify</p>
+            <p class="banner-sub">Đăng ký để nghe không giới hạn các bài hát và podcast với quảng cáo không thường xuyên. Không cần thẻ tín dụng.</p>
+        </div>
+        <button class="btn-white">Đăng ký miễn phí</button>
+    </div>
+
+</body>
+</html>
