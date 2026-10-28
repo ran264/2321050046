@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .video{
+            width: 50%;
+            height: 500px;
+            margin: auto;
+            background-color: antiquewhite;
+        }
+
+        .danh-sach{
+            width: 80%;
+            display: flex;
+            margin: 50px auto;
+            justify-content: space-between;
+
+        }
+
+        .anh{
+            width: 24%;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Gn2yQYnDMxg?si=-sb2KpuDES8aKqWq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+    <div class="danh-sach">
+        <div class="anh" onclick="chonVid(5)">
+            <img src="na1.jpg" alt="">
+        </div>
+        <div class="anh" onclick="chonVid(2)">
+            <img src="na1.jpg" alt="">
+        </div>
+        <div class="anh"onclick="chonVid(3)">
+            <img src="kinh-lup.jpg" alt="">
+        </div>
+        <div class="anh" onclick="chonVid(4)">
+            <img src="tre-em.jpg" alt="">
+        </div>
+
+
+    </div>
+    <script>
+        var danhSachVid = [
+            {
+                id:2,
+                ten: "Muộn rồi mà sao còn ",
+                duongDanhAnh:"na1.jpg",
+                duongDanYoutube: "https://youtu.be/xypzmu5mMPY?si=ynVk8J-JVq3HKaoU"
+            },
+            {
+                id:3,
+                ten: "Muộn rồi mà sao còn ",
+                duongDanhAnh:"na1.jpg",
+                duongDanYoutube: "https://youtu.be/xypzmu5mMPY?si=ynVk8J-JVq3HKaoU"
+            },
+            {
+                id:4,
+                ten: "Muộn rồi mà sao còn ",
+                duongDanhAnh:"na1.jpg",
+                duongDanYoutube: "https://youtu.be/xypzmu5mMPY?si=ynVk8J-JVq3HKaoU"
+            },
+            {
+                id:5,
+                ten: "Muộn rồi mà sao còn ",
+                duongDanhAnh:"na1.jpg",
+                duongDanYoutube: "https://youtu.be/xypzmu5mMPY?si=ynVk8J-JVq3HKaoU"
+            },
+
+        ]
+        function chonVid(id){
+            for(let i = 0; i< danhSachVid.length;i++){
+                if(danhSachVid[i].id ==id){
+                    document.get
+                }
+            }
+        }
+    </script>
+</body>
+</html>
